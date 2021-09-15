@@ -1,0 +1,87 @@
+Flutter Commands:
+    1. flutter create project
+    2. flutter run
+    3. flutter pub get
+    4. flutter pub upgrade
+    5. flutter test
+    6. flutter pub outdated
+    7. flutter --help --verbose
+    8. flutter analyze -d <DEVICE_ID>
+
+
+Flutter run key commands.
+    r Hot reload. 
+    R Hot restart.
+    h Repeat this help message.
+    d Detach (terminate "flutter run" but leave application running).
+    c Clear the screen
+    q Quit (terminate the application on the device)
+
+
+Flutter Architecture:
+    1. Widgets - Primary Component
+    2. Concept of State
+    3. Layers
+    4. Gestures
+
+
+Widgets: 
+    combination of widgets becomes an application. root(starts) - our own widgets - MaterialApp Widgets- Scaffold Widget (UI components)
+    appBar, Body. binding into a common object that will create a page.
+
+    Flow: MyApp (root) - MaterialApp - Pages - Scaffold (AppBar, Body)
+
+Layers:
+    Hierarchial data - (list1, list2, ....) - buiit on top of another
+    Topmost Layer - Based on Operating System
+    Second Layer - UI components, state management, gestures
+    third Layer - Rendering into the output
+
+    Flow: Platform based widgets - Widgets - Rendering - Output
+
+Gestures:
+    tap, swipe, drag
+
+State (Satteful & Stateless Widgets):
+    1. Stateless Widget: immutable - this data can't be changed; on run time we can't re-draw it.
+        - extends StatelessWidget{
+            const Page({Key key}), 
+            
+            @override
+            Widget build(BuildContext context){
+                return Container(
+                /// UI components - static
+                );
+            }
+            }
+        - Button, icon, Text --- internal state to be changed dynamically
+    
+    2. Stateful Widget: mutable (dynamic data process via API, data, file access, local list)
+        - Button with action, 
+        
+        class OwnWidget extends StatefulWidget{
+            @override
+            _OwnWidgetState createState() => _OwnWidgetState();            
+        }
+
+        class _OwnWidgetState extends State<OwnWidget>{
+            @override
+            Widget build(BuildContext context){
+                return Container(
+                    // UI components - dynamic
+                );
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
