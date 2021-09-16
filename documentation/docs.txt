@@ -42,7 +42,7 @@ Layers:
 Gestures:
     tap, swipe, drag
 
-State (Satteful & Stateless Widgets):
+State (Stateful & Stateless Widgets):
     1. Stateless Widget: immutable - this data can't be changed; on run time we can't re-draw it.
         - extends StatelessWidget{
             const Page({Key key}), 
@@ -76,6 +76,7 @@ State (Satteful & Stateless Widgets):
 
 
 
+// stful, stless, stanim
 
 
 
@@ -84,4 +85,4 @@ State (Satteful & Stateless Widgets):
 
 
 
-
+Row() -- Column(): crossAxisAlignment & mainAxisAlignment
