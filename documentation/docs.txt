@@ -83,6 +83,6 @@ State (Stateful & Stateless Widgets):
 
 
 
-
-
-Row() -- Column(): crossAxisAlignment & mainAxisAlignment
+Row(children:) -- Column(): crossAxisAlignment & mainAxisAlignment
+Center(child:)
+Container(child:)

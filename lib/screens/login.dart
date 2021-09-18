@@ -76,7 +76,10 @@ class _LoginPageState extends State<LoginPage> {
                                     radius: 30,
                                     backgroundColor: Colors.blueAccent,
                                     child: IconButton(
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.pushNamed(
+                                            context, 'dashboard');
+                                      },
                                       icon: Icon(Icons.arrow_forward),
                                     ))
                               ],
