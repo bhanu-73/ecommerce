@@ -78,7 +78,7 @@ class _LoginPageState extends State<LoginPage> {
                                     child: IconButton(
                                       onPressed: () {
                                         Navigator.pushNamed(
-                                            context, 'dashboard');
+                                            context, 'edashboard');
                                       },
                                       icon: Icon(Icons.arrow_forward),
                                     ))
