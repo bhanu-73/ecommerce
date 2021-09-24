@@ -1,3 +1,5 @@
+// import 'package:ecommerce/values/imagepath.dart';
+import 'package:ecommerce/values/values.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 
@@ -16,24 +18,24 @@ class _MyHomePageState extends State<EcommerceDashBoard> {
   @override
   Widget build(BuildContext context) {
     Widget _imageList = Container(
-      height: 220,
+      height: Sizes.HEIGHT_200,
       child: Carousel(
         boxFit: BoxFit.fill,
         images: [
-          AssetImage('assets/Bakery.png'),
-          AssetImage('assets/Vegetables.png'),
-          AssetImage('assets/Foodgrains.png'),
-          AssetImage('assets/tomato.png'),
-          AssetImage('assets/onion.png'),
-          AssetImage('assets/Household.png'),
+          AssetImage(ImagesPath.bakImage),
+          AssetImage(ImagesPath.vegImage),
+          AssetImage(ImagesPath.foodImage),
+          AssetImage(ImagesPath.tomatoImg),
+          AssetImage(ImagesPath.oninonImg),
+          AssetImage(ImagesPath.houseImg),
         ],
         autoplay: true,
         animationCurve: Curves.fastOutSlowIn,
         animationDuration: Duration(milliseconds: 3000),
-        dotSize: 4.0,
-        dotSpacing: 15.0,
+        dotSize: Sizes.SIZE_4,
+        dotSpacing: Sizes.SIZE_16,
         dotColor: Colors.redAccent,
-        indicatorBgPadding: 8.0,
+        indicatorBgPadding: Sizes.SIZE_8,
         dotBgColor: Colors.transparent,
         borderRadius: true,
       ),
@@ -45,7 +47,9 @@ class _MyHomePageState extends State<EcommerceDashBoard> {
         title: const Text('Flipkart'),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, 'categorylist');
+            },
             icon: Icon(Icons.search_rounded, color: Colors.white),
           ),
           IconButton(
@@ -70,10 +74,11 @@ class _MyHomePageState extends State<EcommerceDashBoard> {
             //   ),
             // ),
             DrawerHeader(
-              child: Text('Flipkart', style: TextStyle(color: Colors.white)),
+              child: Text(StringConst.APP_NAME,
+                  style: TextStyle(color: Colors.white)),
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage('assets/register.png'),
+                      image: AssetImage(ImagesPath.registerImage),
                       fit: BoxFit.fill)),
             ),
             const InkWell(
@@ -84,9 +89,6 @@ class _MyHomePageState extends State<EcommerceDashBoard> {
                         fontSize: 20,
                         fontWeight: FontWeight.w400)),
                 leading: Icon(Icons.home),
-                // onTap: () {
-                //   Navigator.pushNamed(context, 'login');
-                // }
               ),
             ),
             const SizedBox(
@@ -106,12 +108,13 @@ class _MyHomePageState extends State<EcommerceDashBoard> {
             ),
             const InkWell(
               child: ListTile(
-                  title: Text('Profile',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20,
-                          fontWeight: FontWeight.w400)),
-                  leading: Icon(Icons.person)),
+                title: Text(StringConst.CATEGORY,
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w400)),
+                leading: Icon(Icons.person),
+              ),
             ),
             const SizedBox(
               height: 10.0,
@@ -278,7 +281,7 @@ Widget _featuredList(BuildContext context) {
             margin: EdgeInsets.symmetric(horizontal: 10.0),
           ),
           const SizedBox(
-            height: 10,
+            height: 10.0,
           ),
           Text('Vegetables')
         ],

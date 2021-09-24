@@ -1,6 +1,6 @@
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
-import 'package:ecommerce/values/colors.dart';
+import 'package:ecommerce/values/values.dart';
 
 const MaterialColor white = const MaterialColor(0xFFFFFFFF, const <int, Color>{
   50: const Color(0xFFFFFFFF),

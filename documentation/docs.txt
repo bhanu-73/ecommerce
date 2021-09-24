@@ -86,3 +86,17 @@ State (Stateful & Stateless Widgets):
 Row(children:) -- Column(): crossAxisAlignment & mainAxisAlignment
 Center(child:)
 Container(child:)
+
+Library - (Package in Python, )
+
+Any folder into a library -  Values ----> library values; (libraryname)
+        - use import only in library root file. (values.dart)
+        part "strings.dart";
+        part "colors.dart";
+        part "imagepath.dart";
+    
+    1. strings.dart -----> part of values;(library)
+    2. colors.dart -----> part of values;(library)
+    3. imagepath.dart -----> part of values;(library)
+
+    Note: import key cannot be used in any part of library

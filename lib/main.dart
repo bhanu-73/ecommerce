@@ -4,6 +4,7 @@ import 'package:ecommerce/screens/register.dart';
 import 'package:ecommerce/screens/welcome.dart';
 import 'package:ecommerce/screens/dashboard.dart';
 import 'package:ecommerce/screens/ecommerce_pages/edashboard.dart';
+import 'package:ecommerce/screens/ecommerce_pages/category_screen.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -15,6 +16,7 @@ void main() {
       'welcome': (context) => WelcomePage(),
       'dashboard': (context) => DashBoardPage(),
       'edashboard': (context) => EcommerceDashBoard(),
+      'categorylist': (context) => CategoryListPage(),
     },
   ));
 }

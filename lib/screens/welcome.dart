@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:ecommerce/values/strings.dart';
+import 'package:ecommerce/values/values.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -35,7 +35,7 @@ class WelcomePage extends StatelessWidget {
                   height: 60,
                 ),
                 Text(
-                  StringConst.WELCOME_DESC,
+                  StringConst.WELCOME_MESSAGE,
                   style: TextStyle(color: Colors.pinkAccent, fontSize: 22),
                 ),
               ],
