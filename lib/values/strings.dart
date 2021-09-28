@@ -5,6 +5,10 @@ class StringConst {
   static const String VERSION = "2.3.0";
   static const String FORGOT_PASSWORD = "Forgot Password?";
   static const String WELCOME = "Welcome to Flipkart!..";
+  static const String HOME = "Home";
+  static const String CART = "Cart";
+  static const String PROFILE = "Profile";
+  static const String BOOK = "Blog";
   static const String RESET_PASSWORD_DESCRIPTION =
       "Enter your email and we will sendyou instructions on how to reset it";
 

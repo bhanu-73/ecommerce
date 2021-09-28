@@ -1,5 +1,10 @@
 // import 'package:ecommerce/values/imagepath.dart';
+import 'package:ecommerce/animations/RotationalAnimation.dart';
+import 'package:ecommerce/animations/ScaleAnimation.dart';
+import 'package:ecommerce/screens/ecommerce_pages/category_screen.dart';
+import 'package:ecommerce/screens/login.dart';
 import 'package:ecommerce/values/values.dart';
+import 'package:ecommerce/widgets/BottomBarNavWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 
@@ -17,7 +22,9 @@ class EcommerceDashBoard extends StatefulWidget {
 class _MyHomePageState extends State<EcommerceDashBoard> {
   @override
   Widget build(BuildContext context) {
-    Widget _imageList = Container(
+    Widget _imageList = Padding(
+      padding: EdgeInsets.only(left: Sizes.SIZE_12, right: Sizes.SIZE_12),
+      child: Container(
       height: Sizes.HEIGHT_200,
       child: Carousel(
         boxFit: BoxFit.fill,
@@ -38,22 +45,29 @@ class _MyHomePageState extends State<EcommerceDashBoard> {
         indicatorBgPadding: Sizes.SIZE_8,
         dotBgColor: Colors.transparent,
         borderRadius: true,
-      ),
+        radius: Radius.circular(Sizes.RADIUS_20),
+          noRadiusForIndicator: true,
+        ),
+    ),
     );
     return Scaffold(
       appBar: AppBar(
         elevation: 10.1,
-        backgroundColor: Colors.redAccent,
+        backgroundColor: Colors.black,
         title: const Text('Flipkart'),
+        iconTheme: IconThemeData(color: Colors.green),
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.pushNamed(context, 'categorylist');
+              // Navigator.pushNamed(context, 'categorylist');
+              Navigator.push(context, ScaleAnimation(CategoryListPage()));
             },
             icon: Icon(Icons.search_rounded, color: Colors.white),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context, RotationalAnimation(LoginPage()));
+            },
             icon: Icon(Icons.shopping_basket, color: Colors.white),
           ),
         ],
@@ -86,7 +100,7 @@ class _MyHomePageState extends State<EcommerceDashBoard> {
                 title: Text('Home',
                     style: TextStyle(
                         color: Colors.black,
-                        fontSize: 20,
+                        fontSize: 16,
                         fontWeight: FontWeight.w400)),
                 leading: Icon(Icons.home),
               ),
@@ -99,7 +113,7 @@ class _MyHomePageState extends State<EcommerceDashBoard> {
                   title: Text('Profile',
                       style: TextStyle(
                           color: Colors.black,
-                          fontSize: 20,
+                          fontSize: 16,
                           fontWeight: FontWeight.w400)),
                   leading: Icon(Icons.person)),
             ),
@@ -111,7 +125,7 @@ class _MyHomePageState extends State<EcommerceDashBoard> {
                 title: Text(StringConst.CATEGORY,
                     style: TextStyle(
                         color: Colors.black,
-                        fontSize: 20,
+                        fontSize: 16,
                         fontWeight: FontWeight.w400)),
                 leading: Icon(Icons.person),
               ),
@@ -124,7 +138,7 @@ class _MyHomePageState extends State<EcommerceDashBoard> {
                   title: Text('Profile',
                       style: TextStyle(
                           color: Colors.black,
-                          fontSize: 20,
+                          fontSize: 16,
                           fontWeight: FontWeight.w400)),
                   leading: Icon(Icons.person)),
             ),
@@ -136,7 +150,7 @@ class _MyHomePageState extends State<EcommerceDashBoard> {
                 title: Text('Settings',
                     style: TextStyle(
                         color: Colors.black,
-                        fontSize: 20,
+                        fontSize: 16,
                         fontWeight: FontWeight.w400)),
                 leading: Icon(Icons.settings),
               ),
@@ -150,7 +164,7 @@ class _MyHomePageState extends State<EcommerceDashBoard> {
                 title: Text('Version 2.0.33',
                     style: TextStyle(
                         color: Colors.black,
-                        fontSize: 20,
+                        fontSize: 16,
                         fontWeight: FontWeight.w400)),
               ),
             ),
@@ -234,13 +248,16 @@ class _MyHomePageState extends State<EcommerceDashBoard> {
               ))
         ],
       ),
+      bottomNavigationBar: BottomBarNavWidget(),
     );
   }
 }
 
 Widget _categoryList(BuildContext context) {
   return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(context, ScaleAnimation(CategoryListPage()));
+      },
       child: Column(
         children: <Widget>[
           Container(
@@ -265,7 +282,9 @@ Widget _categoryList(BuildContext context) {
 
 Widget _featuredList(BuildContext context) {
   return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(context, ScaleAnimation(CategoryListPage()));
+      },
       child: Column(
         children: <Widget>[
           Container(

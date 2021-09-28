@@ -1,3 +1,4 @@
+import 'package:ecommerce/screens/ecommerce_pages/productDetails.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce/screens/login.dart';
 import 'package:ecommerce/screens/register.dart';
@@ -9,7 +10,7 @@ import 'package:ecommerce/screens/ecommerce_pages/category_screen.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: WelcomePage(),
+    home: EcommerceDashBoard(),
     routes: {
       'login': (context) => LoginPage(),
       'register': (context) => RegisterPage(),

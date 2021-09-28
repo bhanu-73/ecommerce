@@ -1,3 +1,5 @@
+import 'package:ecommerce/animations/ScaleAnimation.dart';
+import 'package:ecommerce/screens/ecommerce_pages/productDetails.dart';
 import 'package:ecommerce/widgets/spaces.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce/values/values.dart';
@@ -23,7 +25,9 @@ class _CategoryListPageState extends State<CategoryListPage> {
               InkWell(onTap: () => Navigator.pushNamed(context, 'edashboard')),
           actions: <Widget>[
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, ScaleAnimation(ProductDetailsPage()));
+              },
               icon: Icon(Icons.search_rounded, color: Colors.white),
             ),
           ],
@@ -39,7 +43,8 @@ class _CategoryListPageState extends State<CategoryListPage> {
               itemBuilder: (context, index) {
                 return Container(
                     child: CategoryCardDesign(
-                  onTap: () => Navigator.pushNamed(context, 'edashboard'),
+                  onTap: () => Navigator.push(
+                      context, ScaleAnimation(ProductDetailsPage())),
                   width: MediaQuery.of(context).size.width,
                   opacity: 0.85,
                   hashandle: true,
