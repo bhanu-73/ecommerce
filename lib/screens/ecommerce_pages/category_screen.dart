@@ -1,5 +1,6 @@
 import 'package:ecommerce/animations/ScaleAnimation.dart';
 import 'package:ecommerce/screens/ecommerce_pages/productDetails.dart';
+import 'package:ecommerce/screens/ecommerce_pages/productList.dart';
 import 'package:ecommerce/widgets/spaces.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce/values/values.dart';
@@ -26,7 +27,7 @@ class _CategoryListPageState extends State<CategoryListPage> {
           actions: <Widget>[
             IconButton(
               onPressed: () {
-                Navigator.push(context, ScaleAnimation(ProductDetailsPage()));
+                Navigator.push(context, ScaleAnimation(ProductListPage()));
               },
               icon: Icon(Icons.search_rounded, color: Colors.white),
             ),

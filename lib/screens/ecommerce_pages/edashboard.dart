@@ -53,9 +53,9 @@ class _MyHomePageState extends State<EcommerceDashBoard> {
     return Scaffold(
       appBar: AppBar(
         elevation: 10.1,
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.grey,
         title: const Text('Flipkart'),
-        iconTheme: IconThemeData(color: Colors.green),
+        iconTheme: IconThemeData(color: Colors.white),
         actions: [
           IconButton(
             onPressed: () {

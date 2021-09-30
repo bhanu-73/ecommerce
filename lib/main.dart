@@ -1,4 +1,5 @@
 import 'package:ecommerce/screens/ecommerce_pages/productDetails.dart';
+import 'package:ecommerce/screens/ecommerce_pages/productList.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce/screens/login.dart';
 import 'package:ecommerce/screens/register.dart';
@@ -10,7 +11,7 @@ import 'package:ecommerce/screens/ecommerce_pages/category_screen.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: EcommerceDashBoard(),
+    home: WelcomePage(),
     routes: {
       'login': (context) => LoginPage(),
       'register': (context) => RegisterPage(),
@@ -18,6 +19,8 @@ void main() {
       'dashboard': (context) => DashBoardPage(),
       'edashboard': (context) => EcommerceDashBoard(),
       'categorylist': (context) => CategoryListPage(),
+      'productlist': (context) => ProductListPage(),
+
     },
   ));
 }

@@ -7,7 +7,11 @@ class StringConst {
   static const String WELCOME = "Welcome to Flipkart!..";
   static const String HOME = "Home";
   static const String CART = "Cart";
+  static const String ADD_TO_CART = "Add to Cart";
+  static const String PRODUCT_SPECS = "Product Specifications";
+  static const String PRODUCT_DETAILS = "Product Details";
   static const String PROFILE = "Profile";
+  static const String PRODUCTS = "Products List";
   static const String BOOK = "Blog";
   static const String RESET_PASSWORD_DESCRIPTION =
       "Enter your email and we will sendyou instructions on how to reset it";

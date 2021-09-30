@@ -1,4 +1,6 @@
 import 'package:ecommerce/animations/ScaleAnimation.dart';
+import 'package:ecommerce/screens/ecommerce_pages/cartPage.dart';
+import 'package:ecommerce/widgets/BottomBarNavWidget.dart';
 import 'package:ecommerce/widgets/SliderImages.dart';
 import 'package:ecommerce/widgets/spaces.dart';
 import 'package:flutter/material.dart';
@@ -33,7 +35,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
             actions: <Widget>[
               IconButton(
                   onPressed: () {
-                    //
+                    // SET THE NAVIGATION
                   },
                   icon: Icon(
                     Icons.business_center,
@@ -64,6 +66,9 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                     productSlider2: ImagesPath.foodImage,
                     productSlider3: ImagesPath.bakImage,
                   ),
+                  const SizedBox(
+                    height: 2.0,
+                  ),
                   ProductTitleWidget(
                       productName: "Apple iPhone 12 Mini",
                       productPrice: "INR 96960",
@@ -73,6 +78,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                   SpaceHeight16(),
                 ],
               )),
+          bottomNavigationBar: BottomBarNavWidget(),
         ));
   }
 }
@@ -124,8 +130,135 @@ class ProductTitleWidget extends StatelessWidget {
                     color: AppColors.black,
                     fontWeight: FontWeight.w500)),
           ],
-        )
+        ),
+        SpaceHeight16(),
+        ProductDetailContext(),
+        SpaceHeight12(),
+        PreferredSize(
+          child: TabBar(
+            labelColor: AppColors.black,
+            indicatorColor: Color(0xFFfd2c2c),
+            unselectedLabelColor: AppColors.grey,
+            indicatorSize: TabBarIndicatorSize.label,
+            labelStyle: TextStyle(fontWeight: FontWeight.w500),
+            tabs: [
+              Tab(
+                text: StringConst.PRODUCT_SPECS,
+              ),
+              Tab(
+                text: StringConst.PRODUCT_DETAILS,
+              )
+            ],
+          ),
+          preferredSize: Size.fromHeight(50.0),
+        ),
+        Container(
+          height: 110.0,
+          child: TabBarView(
+            children: [
+              Container(
+                color: Colors.white,
+                child: ProductSpecs(),
+              ),
+              Container(
+                color: Colors.white,
+                child: ProductDetailContext(),
+              )
+            ],
+          ),
+        ),
+        SpaceHeight16(),
+        AddToCartMenu(),
       ],
+    );
+  }
+}
+
+class AddToCartMenu extends StatelessWidget {
+  const AddToCartMenu({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          IconButton(
+              onPressed: () => Navigator.pushNamed(context, ''),
+              icon: Icon(FontAwesomeIcons.shoppingCart),
+              color: AppColors.black,
+              iconSize: Sizes.SIZE_36),
+          InkWell(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    ScaleAnimation(CartPage()));
+              },
+              child: Container(
+                  height: Sizes.HEIGHT_48,
+                  width: Sizes.WIDTH_200,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(Sizes.RADIUS_12),
+                    color: Color(0xFFfd2c2c),
+                    border:
+                        Border.all(width: Sizes.WIDTH_1, color: Colors.white),
+                  ),
+                  child: Center(
+                    child: Text(
+                      StringConst.ADD_TO_CART,
+                      style: TextStyle(
+                          fontSize: Sizes.TEXT_SIZE_20,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w400),
+                    ),
+                  ))),
+          IconButton(
+              onPressed: () => Navigator.pushNamed(context, ''),
+              icon: Icon(Icons.add),
+              color: AppColors.black,
+              iconSize: Sizes.SIZE_36),
+        ],
+      ),
+    );
+  }
+}
+
+class ProductDetailContext extends StatelessWidget {
+  const ProductDetailContext({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Text(
+        // TextDesc
+        'Apple iPhone is one of the best devices in the market in terms of performance, and the build quality of the device with exquisite design pattern where deisgned by Apple INc, and manufactured by Foxconn IN.',
+        style: TextStyle(
+            fontSize: Sizes.TEXT_SIZE_14,
+            fontWeight: FontWeight.w300,
+            height: 1.50,
+            color: Colors.black54),
+        textAlign: TextAlign.justify,
+      ),
+    );
+  }
+}
+
+class ProductSpecs extends StatelessWidget {
+  const ProductSpecs({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Text(
+        // TextDesc
+        'Time Cook, CEO of Apple Inc. is one of the best devices in the market in terms of performance, and the build quality of the device with exquisite design pattern where deisgned by Apple INc, and manufactured by Foxconn IN.',
+        style: TextStyle(
+            fontSize: Sizes.TEXT_SIZE_14,
+            fontWeight: FontWeight.w300,
+            height: 1.50,
+            color: Colors.black54),
+        textAlign: TextAlign.justify,
+      ),
     );
   }
 }

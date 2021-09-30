@@ -29,6 +29,8 @@ class ProductDetailsSlider extends StatelessWidget {
               // AssetImage(ImagesPath.oninonImg),
               // AssetImage(ImagesPath.houseImg),
               Image.asset(productSlider1),
+              Image.asset(productSlider2),
+              Image.asset(productSlider3),
             ],
             autoplay: true,
             animationCurve: Curves.fastOutSlowIn,
