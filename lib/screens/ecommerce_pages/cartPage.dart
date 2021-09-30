@@ -23,6 +23,8 @@ class _CartPageState extends State<CartPage> {
   List<int> count = [1, 1, 1];
   @override
   Widget build(BuildContext context) {
+    // items[0].img, items[1].img, items[2].img, items[3].img,
+    
     List<Product> items = [
       Product(
           ImagesPath.bakImage, 'Apple iPhone 12', 'Electronics', '\$ 89900.00'),
@@ -30,6 +32,8 @@ class _CartPageState extends State<CartPage> {
           ImagesPath.oninonImg, 'Samsung Note 20', 'Mobiles', '\$ 69900.00'),
       Product(
           ImagesPath.foodImage, 'MacBook Air Pro', 'Laptops', '\$ 149900.00'),
+           Product(
+          ImagesPath.bakImage, 'Apple iPhone 12', 'Electronics', '\$ 69900.00'),
     ];
 
     return Scaffold(
@@ -62,6 +66,7 @@ class _CartPageState extends State<CartPage> {
                       children: [
                         ClipRRect(
                           borderRadius: BorderRadius.circular(Sizes.RADIUS_12),
+                          // Image.assets('Values')
                           child: Image.asset(
                             items[index].img,
                             height: 96.0,
