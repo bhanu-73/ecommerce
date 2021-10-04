@@ -1,0 +1,12 @@
+# split yourself into 4 batches: 15 members
+# 1 monitoring and collecting all the files and make it as a single project
+
+
+
+1. Praveen - Home Screen, Animations, few widgets
+
+
+Sushanth
+Benhur 
+Rahul
+Praveen Kumar
