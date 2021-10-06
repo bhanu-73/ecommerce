@@ -1,4 +1,5 @@
 part of values;
+
 class StringConst {
   //strings
   static const String APP_NAME = "Flipkart";
@@ -8,6 +9,8 @@ class StringConst {
   static const String HOME = "Home";
   static const String CART = "Cart";
   static const String ADD_TO_CART = "Add to Cart";
+  static const String ADDRESS = "Address";
+  static const String SELECTED_ADDRESS = "Selected Address";
   static const String PRODUCT_SPECS = "Product Specifications";
   static const String PRODUCT_DETAILS = "Product Details";
   static const String PROFILE = "Profile";
@@ -44,6 +47,7 @@ class StringConst {
   static const String CREATE_NEW_ACCOUNT = "Create New Account";
   static const String STATUS_OPEN = "OPEN";
   static const String STATUS_CLOSE = "CLOSE";
+  static const String SELECT_PAYMENT_MODE = "Payment Mode";
 
   //Categories
   static const String ITALIAN = "Italian";

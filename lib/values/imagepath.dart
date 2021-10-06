@@ -10,6 +10,7 @@ class ImagesPath {
   static const String splashImage_1 = "$rootDir/splash_1.png";
   static const String splashImage_2 = "$rootDir/splash_1.png";
   static const String splashImage_3 = "$rootDir/splash_3.png";
+  static const String headerImg = "$rootDir/header.png";
 
   // product images
   static const String bakImage = "$rootDir/Bakery.png";

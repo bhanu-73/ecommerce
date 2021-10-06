@@ -180,7 +180,7 @@ class _CartPageState extends State<CartPage> {
                         height: Sizes.HEIGHT_8,
                       ),
                       GestureDetector(
-                        onTap: () => Navigator.pushNamed(context, 'edashboard'),
+                        onTap: () => Navigator.pushNamed(context, 'address'),
                         child: Container(
                             width: MediaQuery.of(context).size.width,
                             height: Sizes.HEIGHT_48,
