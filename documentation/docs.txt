@@ -100,3 +100,41 @@ Any folder into a library -  Values ----> library values; (libraryname)
     3. imagepath.dart -----> part of values;(library)
 
     Note: import key cannot be used in any part of library
+
+API - Applicaiton package(programming) Interface:
+http:// or https://
+
+Web(Mobile) ----> request ---->(internet) API ----> Web Server ----> Database ---> Response ---> Client (App)
+
+CorePHP or (laravel or CodeIgniter) or Python or Atom or Java -- Integrated in Applicaiton
+
+
+End Point ----> Response ----> Server ----> End Point
+
+local server -- Apache (xampp) -- NodeJS (https://nodejs.org)
+
+Types Server:
+    1. Application Server (Cost inefficent) - low level of application (Cpanel - godaddy)
+        a) host websites/low level application (spped or performance)
+    2. Media Servers (Videos ) -- 1GB (1 million users) -- 100TB --- $9000 - $15000
+    3. WebRTC (Stun/Turn) - Peer-to-Peer connection (messaging, video, call)
+    4. Signalling Servers
+
+JSON/XML - formats: key:value -----> Map(Dart) or Dict(Python) or Associative array(PHP)
+
+/* 
+List: [ {}, {}, { "":[{{{{}}}}]} ] ---> object[0]["key"]
+
+Dict: { { [], [], []} } ----> object["key"]
+*/
+
+
+Core Methods:
+    1. GET --> fetch the data
+    2. POST ----> id, credentials 
+    3. PUT ----> Request the specified url throught PUT 
+    4. DELETE ----> 
+    5. HEAD ---> Authorization (SECRET KEY and SECRET ID)
+
+
+Future, Async, Await, Factory, GlobalKey

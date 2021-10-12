@@ -1,7 +1,8 @@
+import 'package:ecommerce/localApiAccess/testApiAccess.dart';
 import 'package:ecommerce/screens/ecommerce_pages/addAddress.dart';
-import 'package:ecommerce/screens/ecommerce_pages/cartPage.dart';
+// import 'package:ecommerce/screens/ecommerce_pages/cartPage.dart';
 import 'package:ecommerce/screens/ecommerce_pages/paymentPage.dart';
-import 'package:ecommerce/screens/ecommerce_pages/productDetails.dart';
+// import 'package:ecommerce/screens/ecommerce_pages/productDetails.dart';
 import 'package:ecommerce/screens/ecommerce_pages/productList.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce/screens/login.dart';
@@ -14,7 +15,7 @@ import 'package:ecommerce/screens/ecommerce_pages/category_screen.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: WelcomePage(),
+    home: FetchCovidAPI(),
     routes: {
       'login': (context) => LoginPage(),
       'register': (context) => RegisterPage(),
