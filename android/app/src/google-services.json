@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "591104567656",
+    "project_id": "packme-cc868",
+    "storage_bucket": "packme-cc868.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:591104567656:android:920ff238379d84215fcedd",
+        "android_client_info": {
+          "package_name": "com.example.ecommerce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "591104567656-kbai4qg2nr1vka0db790ujurdqts5gnm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_9Le89E2kjDI_xfIxW0UuSF2sYyiv6YI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "591104567656-kbai4qg2nr1vka0db790ujurdqts5gnm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

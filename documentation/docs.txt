@@ -138,3 +138,47 @@ Core Methods:
 
 
 Future, Async, Await, Factory, GlobalKey
+
+
+1. UI
+2. HTTP - API
+3. JSON local file access
+4. Walkthrough Pages ----> OneTime Execution
+5. SplashScreens ----> Every time
+6. Notification (Push Notification & Local Notification)
+7. Application Build
+8. Testing
+9. PlayStore & App Store hosting
+Other Features:
+1. Map Integration
+2. SMS OTP Integration
+3. Firebase Implementation
+4. Shared Preferences
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Firebase Setup: (gmail id)
+    1. https://console.firebase.google.com/
+    2. Create a project over there
+    3. Firebase Realtime Analysis - Crashlytics
+    4. Register your Android/iOS/Web app
+    5. Downloading googleservices.json
+    6. update Build.gradle with dependencies
+    7. Load plugins in pubspec.yaml (  firebase_core, firebase_auth)
+    8. Register and Create app in Onesignal 
+    9. Integrate Onesignal with Firebase (collect app ID)
+
+OneSignal APP ID: 2cb1d8a6-2edf-4846-90f8-4012ada0dbe2

@@ -76,6 +76,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                       productDesc:
                           "12 mini takes more than 12 billion transistors to run whatever you throw at it"),
                   SpaceHeight16(),
+                  
                 ],
               )),
           bottomNavigationBar: BottomBarNavWidget(),

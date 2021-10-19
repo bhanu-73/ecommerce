@@ -1,3 +1,5 @@
+import 'package:ecommerce/widgets/dropDownFormField.dart';
+import 'package:ecommerce/widgets/dropdownWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -78,6 +80,14 @@ class _RegisterPageState extends State<RegisterPage> {
                                                 BorderRadius.circular(12),
                                           )),
                                     ),
+                                    SizedBox(
+                                      height: 30,
+                                    ),
+                                    DropDownFormWidget(),
+                                    SizedBox(
+                                      height: 30,
+                                    ),
+                                    DropDownWidget(),
                                     SizedBox(
                                       height: 30,
                                     ),
