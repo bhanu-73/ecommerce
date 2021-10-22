@@ -1,4 +1,5 @@
-import 'package:ecommerce/firebase_access/auth_signin.dart';
+//import 'package:ecommerce/firebase_access/auth_signin.dart';
+import 'package:ecommerce/screens/welcome.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Authentication',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: AuthSignInPage(),
+      home: WelcomePage(),
     );
   }
 }
