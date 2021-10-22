@@ -8,6 +8,8 @@ import 'package:ecommerce/screens/ecommerce_pages/paymentPage.dart';
 // import 'package:ecommerce/screens/ecommerce_pages/productDetails.dart';
 import 'package:ecommerce/screens/ecommerce_pages/productList.dart';
 import 'package:ecommerce/util/notifyService.dart';
+import 'package:ecommerce/widgets/cardGesture.dart';
+import 'package:ecommerce/widgets/favoriteIconWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce/screens/login.dart';
 import 'package:ecommerce/screens/register.dart';
@@ -106,6 +108,18 @@ class _LocalNotificationTestPageState extends State<LocalNotificationTestPage> {
               ),
               ElevatedButton(
                 onPressed: () async {
+                  await _notificationService.scheduledDynamicNotification(
+                      2,
+                      'Pongal Offer at Diwali Time!',
+                      'Welcome to the Pongal Offers of Amazon!..');
+                },
+                child: Text('Scheduled Dynamic'),
+              ),
+              SizedBox(
+                height: 16.0,
+              ),
+              ElevatedButton(
+                onPressed: () async {
                   await _notificationService.cancelNotification(1);
                 },
                 child: Text('Cancel Notification'),
@@ -119,6 +133,10 @@ class _LocalNotificationTestPageState extends State<LocalNotificationTestPage> {
                 },
                 child: Text('Cancel All'),
               ),
+              SizedBox(height: 16.0),
+              FavotireIconWidget(),
+              SizedBox(height: 16.0),
+              CardGestureWidget(),
             ],
           ),
         ),
@@ -126,3 +144,5 @@ class _LocalNotificationTestPageState extends State<LocalNotificationTestPage> {
     );
   }
 }
+
+
